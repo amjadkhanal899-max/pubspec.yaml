@@ -19,9 +19,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew || true
 
@@ -36,6 +33,6 @@ jobs:
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: VoxStudio-App-APK
+          name: VoxStudio-APK
           path: '**/build/outputs/apk/**/*.apk'
           
